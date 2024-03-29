@@ -1,0 +1,74 @@
+/* styling is in alphabetical order */
+/* standard elements */
+
+body {
+    font-family: Veranda, sans-serif;
+    background-color: #f4f4ed;
+    max-width: 100vw;
+}
+
+h1 {
+    display: flex;
+    justify-content: right;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    height: 40px;
+}
+
+li {
+    border-right: 1px solid #bbb;
+    float: right;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+li:last-child {
+    border-left: none;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    justify-content: right;
+}
+
+/* classes */
+.inline {
+    display: inline-block;
+}
+
+.story-box {
+    border: solid 2px black;
+    border-radius: 7px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.story-div {
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    flex-direction: column;
+    max-width: 70vh;
+}
+
+/* ids */
