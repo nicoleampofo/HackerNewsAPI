@@ -1,4 +1,5 @@
 /* styling is in alphabetical order */
+
 /* standard elements */
 
 body {
@@ -57,15 +58,6 @@ ul {
     display: inline-block;
 }
 
-#story {
-    border: solid 2px black;
-    border-radius: 7px;
-    margin-top: 20px;
-    width: 100%;
-    padding: 5px;
-    text-decoration:none;
-    color: black;
-}
 
 .stories {
     display: flex;
@@ -77,3 +69,27 @@ ul {
 }
 
 /* ids */
+#button {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #555555;
+    border-radius: 15px
+}
+
+#story {
+    border: solid 2px black;
+    border-radius: 7px;
+    margin-top: 20px;
+    width: 100%;
+    padding: 5px;
+    text-decoration:none;
+    color: black;
+}

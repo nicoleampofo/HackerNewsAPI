@@ -1,13 +1,14 @@
 let story_url = ''
 
 const story = document.getElementById('story')
-const a = document.querySelector('a')
+const a = document.querySelectorAll('a')
 
 fetch("https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty")
     .then(res => res.json()) // parse response as JSON
     .then(data => {
         // get the top 5 stories out of 500
-        const storiesArray = data.slice(0,1);
+        const storiesArray = data.slice(0,5);
+        console.log(storiesArray)
         // loop through the values and create an array for each one with the title
         for(let i = 0; i < storiesArray.length; i++){
             let id = storiesArray[i]
@@ -15,18 +16,18 @@ fetch("https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty")
             fetch(story_url)
                 .then(response => response.json())
                 .then(data => {
-                    a.href=data.url
-                    story.innerText=data.title
-                    console.log("data.title=", data.title)
-                    console.log("data.url=", data.url)
-                    document.getElementById("story").innerText=data.title
-                    document.querySelectorAll('a').href=data.url
+                    a[i].href=data.story_url
+                    a[i].innerText=data.title
         })
         }
     })
     .catch(err => {
         console.log(`error ${err}`)
     });
+
+    function refresh(){
+        window.location.reload("Refresh")
+    }
 
 
         // a href = `https://hacker-news.firebaseio.com/v0/item/${id}.json?print=pretty`
