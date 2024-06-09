@@ -16,7 +16,7 @@ fetch("https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty")
             fetch(story_url)
                 .then(response => response.json())
                 .then(data => {
-                    a[i].href=data.story_url
+                    a[i].href=data.url
                     a[i].innerText=data.title
         })
         }
